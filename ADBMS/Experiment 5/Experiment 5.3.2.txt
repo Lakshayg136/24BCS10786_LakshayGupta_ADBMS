@@ -1,0 +1,14 @@
+DO $$
+DECLARE
+    AGE INT := 17;
+
+BEGIN
+    IF AGE >= 18 THEN
+        RAISE NOTICE 'Your age is % and you are eligible to vote', AGE;
+    ELSE
+        RAISE NOTICE 'Your age is % and you are not eligible to vote', AGE;
+    END IF;
+
+    RAISE NOTICE 'You are inside begin end block';
+END;
+$$;
